@@ -1,0 +1,18 @@
+<html>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ {% include 'AD/navigation.html' %}
+ <h2 class="alert alert-primary">{{ infor }}</h2>
+<form method="POST">
+	{% csrf_token %} 
+	 <div class="col-xs-6">
+	 	 <label for="name">OU Name:</label>
+         <input type="text" class="form-control" id="name" name="name" maxlength="26">
+
+         <label for="description">Description:</label>
+         <input type="text" class="form-control" id="description" name="description" maxlength="26"><br>
+         <button type="submit"  class="btn btn-success">Create</button>
+	 </div>
+</form>
+ </html>

@@ -1,0 +1,22 @@
+<html>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<h1 class="alert alert-success">AD Mange Home</h1>
+ 
+<form action="listusers/" method="POST">
+	{% csrf_token %} 
+	 <div class="col-xs-6">
+<label for="ex1">DC Server: </label><input type="text" name="DC" class="form-control id="ex1"" maxlength="26"></input> 
+
+<label for="ex2">Username: </label><input type="text" name="username" class="form-control id="ex2"" maxlength="26"></input> 
+<label for="ex3">Password: </label><input type="text" name="password" class="form-control id="ex3"" maxlength="26"></input> 
+<button type="submit"  class="btn btn-success">Connect</button>
+
+  
+</form>
+</div>
+
+
+</html>

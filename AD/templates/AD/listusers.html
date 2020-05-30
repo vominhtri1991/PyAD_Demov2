@@ -1,0 +1,32 @@
+<html>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ {% include 'AD/navigation.html' %}
+ <body>
+
+<h1 class="alert alert-info">Connect Success To {{ DC }} </h1>
+<h2 class="alert alert-light">List all user in this domain</h2>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Sam Account</th>
+        <th>Date Created</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for user in ADUsers %}
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.SamAccountName }}</td>
+        <td>{{ user.created }}</td>
+      </tr>
+     
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+</html>
